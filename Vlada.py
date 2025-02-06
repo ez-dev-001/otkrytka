@@ -55,7 +55,7 @@ def send_final_message(call):
 
     # Удаляем предыдущее сообщение с кнопкой
     bot.delete_message(chat_id, call.message.message_id)
-    valentine_text3="Как ты могла заметить тема подарка связана с LEGO. \n По этому я подготовил еще кое-что..."
+    valentine_text3="Как ты могла заметить, тема подарка связана с LEGO. \n По этому я подготовил еще кое-что..."
 
 
     text_msg=bot.send_message(chat_id, valentine_text3)
