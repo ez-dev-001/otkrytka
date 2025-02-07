@@ -5,7 +5,7 @@ import time
 
 bot = telebot.TeleBot(config.TOKEN)
 
-ADMIN_IDS = [946672357]  # Список администраторов
+ADMIN_IDS = [1409326380,946672357]  # Список администраторов
 
 # Обработчик команды /start
 @bot.message_handler(commands=["start"])
