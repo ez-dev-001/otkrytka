@@ -5,7 +5,7 @@ import time
 
 bot = telebot.TeleBot(config.TOKEN)
 
-ADMIN_IDS = [1409326380,946672357]  # Список администраторов
+ADMIN_IDS = [946672357]  # Список администраторов
 
 # Обработчик команды /start
 @bot.message_handler(commands=["start"])
@@ -19,7 +19,7 @@ def send_welcome(message):
     if user_id not in ADMIN_IDS:
         bot.send_message(chat_id, "⛔ У вас нет доступа к этому боту!")
         return
-
+    print("Открытка открыта")
     # Создание кнопки "Далее"
     markup = InlineKeyboardMarkup()
     next_button = InlineKeyboardButton("➡ Далее", callback_data="next_text")
