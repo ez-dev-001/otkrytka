@@ -149,6 +149,21 @@ def send_final_message(call):
     final_image = "https://i.imgur.com/Ev8gzgV.png"  # Замени на свою картинку
     bot.send_photo(chat_id, final_image, caption="А вот и ты! Бора принес очень необычный подарок\n\n Сделано Владиком c любовью ❤️")
 
+@bot.message_handler(commands=["send"])
+def send_welcome(message):
+    chat_id = message.chat.id
+    user_id = message.from_user.id
+    if user_id not in ADMIN_IDS:
+        bot.send_message(chat_id, "⛔ У вас нет доступа к этому боту!")
+        return
+    text1="Привет, Владуся! Это снова я - твоя открытка.\n Узнал, что у тебя не очень настроение и хочу тебе кое-что по секрету рассказать"
+    txt_msg=bot.send_message(1409326380,text1)
+
+    
+
+
+    # Проверка, является ли пользователь администратором
+    if user_id not in ADMIN_IDS:
 # Перезапуск бота при ошибке
 while True:
     try:
