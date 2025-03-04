@@ -162,8 +162,6 @@ def send_welcome(message):
     
 
 
-    # Проверка, является ли пользователь администратором
-    if user_id not in ADMIN_IDS:
 # Перезапуск бота при ошибке
 while True:
     try:
